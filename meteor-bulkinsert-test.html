@@ -1,0 +1,28 @@
+<head>
+  <title>meteor-bulkinsert-test</title>
+</head>
+
+<body>
+ 	<h2>When you click the button, it will insert 2235 documents.</h2><br>
+	This is a very simplified example, where insertion takes ±3s and recalculation of the helpers ±2.
+	In more complex examples with nested templates and many helpers, this would take longer (until 20-30s).
+
+ 	<br><br>
+	<button class="insertDocuments">Load and Insert</button>
+
+	<br><br>
+	<div class="animation"></div>
+
+	<br>
+	<br>
+
+	{{#each items}}
+		{{> displayDocument}}
+	{{/each}}
+</body>
+
+<template name="displayDocument">
+  <h1>{{title}}</h1>
+  <h2>{{episodeTitle}}</h2>
+  <br><br>
+</template>
